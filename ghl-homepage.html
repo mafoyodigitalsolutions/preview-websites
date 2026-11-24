@@ -86,11 +86,14 @@
 
 .pcf-page .nav {
   position: sticky; top: 0; z-index: 50;
-  display: flex; align-items: center; gap: 32px;
   padding: 16px 48px;
   background: rgba(18, 0, 24, 0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+.pcf-page .nav__inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 32px;
 }
 .pcf-page .nav__mark { display: flex; align-items: center; gap: 10px; }
 .pcf-page .nav__logo { height: 44px; width: auto; display: block; }
@@ -451,7 +454,8 @@
 .pcf-page .footer__social span { color: var(--pcf-gold); }
 
 @media (max-width: 960px) {
-  .pcf-page .nav { padding: 12px 16px; gap: 12px; flex-wrap: nowrap; justify-content: space-between; }
+  .pcf-page .nav { padding: 12px 16px; }
+  .pcf-page .nav__inner { gap: 12px; justify-content: space-between; }
   .pcf-page .nav__links { display: none; }
   .pcf-page .nav__logo { height: 36px; }
   .pcf-page { --pcf-section-y: 72px; }
@@ -498,17 +502,19 @@
 <div class="pcf-page">
 
 <header class="nav">
-  <a class="nav__mark" href="#">
-    <img class="nav__logo" src="EMBLEM_URL" alt="PCF" />
-  </a>
-  <nav class="nav__links" aria-label="Primary">
-    <a href="#services">Tax Preparation</a>
-    <a href="#team">The Team</a>
-    <a href="#tax-team">Join the Team</a>
-    <a href="#academy">Mentorship</a>
-    <a href="#intake">Intake</a>
-  </nav>
-  <a class="btn btn--primary btn--sm" href="#intake">Start My Tax Return</a>
+  <div class="nav__inner">
+    <a class="nav__mark" href="#">
+      <img class="nav__logo" src="EMBLEM_URL" alt="PCF" />
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#services">Tax Preparation</a>
+      <a href="#team">The Team</a>
+      <a href="#tax-team">Join the Team</a>
+      <a href="#academy">Mentorship</a>
+      <a href="#intake">Intake</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="#intake">Start My Tax Return</a>
+  </div>
 </header>
 
 <section class="hero">
